@@ -5,51 +5,51 @@ using UnityEngine;
 
 namespace AngusHCY.EditorSceneBuilder
 {
-    internal static class SerializedComponentUtility
+    public static class SerializedComponentUtility
     {
-        internal static void SetObjectReference(Component target, string fieldName, UnityEngine.Object value)
+        public static void SetObjectReference(Component target, string fieldName, UnityEngine.Object value)
         {
             SerializedProperty property = GetProperty(target, fieldName);
             property.objectReferenceValue = value;
             Apply(target, property.serializedObject);
         }
 
-        internal static void SetString(Component target, string fieldName, string value)
+        public static void SetString(Component target, string fieldName, string value)
         {
             SerializedProperty property = GetProperty(target, fieldName);
             property.stringValue = value;
             Apply(target, property.serializedObject);
         }
 
-        internal static void SetBool(Component target, string fieldName, bool value)
+        public static void SetBool(Component target, string fieldName, bool value)
         {
             SerializedProperty property = GetProperty(target, fieldName);
             property.boolValue = value;
             Apply(target, property.serializedObject);
         }
 
-        internal static void SetFloat(Component target, string fieldName, float value)
+        public static void SetFloat(Component target, string fieldName, float value)
         {
             SerializedProperty property = GetProperty(target, fieldName);
             property.floatValue = value;
             Apply(target, property.serializedObject);
         }
 
-        internal static void SetInt(Component target, string fieldName, int value)
+        public static void SetInt(Component target, string fieldName, int value)
         {
             SerializedProperty property = GetProperty(target, fieldName);
             property.intValue = value;
             Apply(target, property.serializedObject);
         }
 
-        internal static void SetVector2(Component target, string fieldName, Vector2 value)
+        public static void SetVector2(Component target, string fieldName, Vector2 value)
         {
             SerializedProperty property = GetProperty(target, fieldName);
             property.vector2Value = value;
             Apply(target, property.serializedObject);
         }
 
-        internal static void SetEnum<TEnum>(Component target, string fieldName, TEnum value)
+        public static void SetEnum<TEnum>(Component target, string fieldName, TEnum value)
             where TEnum : struct
         {
             SerializedProperty property = GetProperty(target, fieldName);

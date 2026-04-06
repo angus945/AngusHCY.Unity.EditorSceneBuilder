@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace AngusHCY.EditorSceneBuilder
 {
-    internal static class SceneObjectFactory
+    public static class SceneObjectFactory
     {
-        internal static Camera CreateOrthographicCamera(
+        public static Camera CreateOrthographicCamera(
             string name,
             Vector3 position,
             float orthographicSize,
@@ -23,7 +23,7 @@ namespace AngusHCY.EditorSceneBuilder
             return camera;
         }
 
-        internal static GameObject CreateSpriteObject(
+        public static GameObject CreateSpriteObject(
             string objectName,
             Vector3 position,
             Sprite sprite,
@@ -39,7 +39,7 @@ namespace AngusHCY.EditorSceneBuilder
             return gameObject;
         }
 
-        internal static CircleCollider2D AddCircleCollider(
+        public static CircleCollider2D AddCircleCollider(
             GameObject target,
             bool isTrigger,
             float radius = 0.5f)
@@ -50,7 +50,7 @@ namespace AngusHCY.EditorSceneBuilder
             return collider;
         }
 
-        internal static Rigidbody2D AddRigidbody2D(
+        public static Rigidbody2D AddRigidbody2D(
             GameObject target,
             RigidbodyType2D bodyType,
             float gravityScale = 0f,

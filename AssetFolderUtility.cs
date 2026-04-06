@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace AngusHCY.EditorSceneBuilder
 {
-    internal static class AssetFolderUtility
+    public static class AssetFolderUtility
     {
-        internal static void EnsureFolders(params string[] assetPaths)
+        public static void EnsureFolders(params string[] assetPaths)
         {
             for (int index = 0; index < assetPaths.Length; index++)
             {
@@ -16,7 +16,7 @@ namespace AngusHCY.EditorSceneBuilder
             AssetDatabase.Refresh();
         }
 
-        internal static void EnsureFolder(string assetPath)
+        public static void EnsureFolder(string assetPath)
         {
             string fullPath = Path.Combine(Application.dataPath, "..", assetPath);
 

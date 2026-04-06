@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AngusHCY.EditorSceneBuilder
 {
-    internal enum SpriteShape
+    public enum SpriteShape
     {
         Square,
         Circle,
@@ -15,13 +15,13 @@ namespace AngusHCY.EditorSceneBuilder
         Ring,
     }
 
-    internal static class GeneratedSpriteAssetUtility
+    public static class GeneratedSpriteAssetUtility
     {
-        private const string SharedSpriteDirectory = "Assets/_Gen/Sprites";
+        private const string SharedSpriteDirectory = "Assets/z_Gen/Sprites";
         private const int TextureSize = 64;
         private const float PixelsPerUnit = 64f;
 
-        internal static Sprite GetOrCreateShapeSprite(SpriteShape shape)
+        public static Sprite GetOrCreateShapeSprite(SpriteShape shape)
         {
             string assetPath = GetAssetPath(shape);
 

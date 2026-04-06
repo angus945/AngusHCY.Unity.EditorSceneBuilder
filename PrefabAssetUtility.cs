@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace AngusHCY.EditorSceneBuilder
 {
-    internal static class PrefabAssetUtility
+    public static class PrefabAssetUtility
     {
-        internal static T LoadOrCreatePrefabComponent<T>(string prefabPath, Func<GameObject> createPrefabRootFunc) where T : Component
+        public static T LoadOrCreatePrefabComponent<T>(string prefabPath, Func<GameObject> createPrefabRootFunc) where T : Component
         {
             GameObject existingPrefab = AssetDatabase.LoadAssetAtPath<GameObject>(prefabPath);
             if (existingPrefab != null)

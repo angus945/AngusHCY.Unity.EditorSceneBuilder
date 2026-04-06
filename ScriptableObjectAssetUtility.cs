@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace AngusHCY.EditorSceneBuilder
 {
-    internal static class ScriptableObjectAssetUtility
+    public static class ScriptableObjectAssetUtility
     {
-        internal static T LoadOrCreateAsset<T>(string assetPath, Func<T> createAssetFunc)
+        public static T LoadOrCreateAsset<T>(string assetPath, Func<T> createAssetFunc)
             where T : ScriptableObject
         {
             T asset = AssetDatabase.LoadAssetAtPath<T>(assetPath);
